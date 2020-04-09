@@ -392,7 +392,7 @@ string OptionParser::format_help() const {
     ss << get_usage() << endl;
 
   if (description() != "")
-    ss << str_format(description(), 0, cols()) << endl;
+    ss << str_format(description(), 0, cols(), false) << endl;
 
   ss << _("Options") << ":" << endl;
   ss << format_option_help();
@@ -408,7 +408,7 @@ string OptionParser::format_help() const {
   }
 
   if (epilog() != "")
-    ss << endl << str_format(epilog(), 0, cols());
+    ss << endl << str_format(epilog(), 0, cols(), false);
 
   return ss.str();
 }
