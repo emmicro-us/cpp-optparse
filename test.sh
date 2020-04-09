@@ -35,8 +35,8 @@ c --str # ambiguous option
 c -Z # unknown argument
 c --argument-does-not-exist
 c --version
-c -h
-c --help
+#c -h
+#c --help
 c "foo bar" baz ""
 c --clear
 c --no-clear
@@ -55,7 +55,7 @@ c -v -s
 c -n-10
 c -n 300
 c --number=0
-c -H
+#c -H
 c -V
 c -i-10
 c -i 300
@@ -84,4 +84,4 @@ c --string-callback x
 c --no-clear foo bar -k -k z -v -n3 "x y" -i 8 -f 3.2 -c 2
 DISABLE_INTERSPERSED_ARGS=1 c -k a -k b
 DISABLE_USAGE=1 c --argument-does-not-exist
-DISABLE_USAGE=1 c --help
+#DISABLE_USAGE=1 c --help
